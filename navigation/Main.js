@@ -8,6 +8,7 @@ import Graph from '../screens/Main/Graph/Graph'
 import colors from '../colors'
 import { Ionicons } from '@expo/vector-icons'
 import Room from '../screens/Main/Room'
+import StreamChatPresenter from '../screens/StreamChat/StreamChatPresenter'
 import Explain from './Explain'
 import { NavigationContainer } from '@react-navigation/native'
 const TabsNavigator = createBottomTabNavigator()
@@ -94,6 +95,7 @@ export default () => (
       options={{
         headerTitle: '대화하기',
         headerBackTitle: '',
+        headerShown: false,
       }}
     ></MainNavigator.Screen>
   </MainNavigator.Navigator>
