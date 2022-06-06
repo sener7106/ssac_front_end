@@ -23,6 +23,7 @@ export default () => (
         headerTitleStyle: {
           color: 'white',
         },
+        headerShown: false,
       }}
     />
     <Auth.Screen

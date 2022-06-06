@@ -1,7 +1,7 @@
 import styled from 'styled-components/native'
 import React, { useState, useCallback, useEffect } from 'react'
 import { GiftedChat, Bubble } from 'react-native-gifted-chat'
-import api from '../../api'
+import api from '../../../api'
 import Text from 'react-native'
 import QuickReplies from 'react-native-gifted-chat/lib/QuickReplies'
 const Container = styled.View`
@@ -14,8 +14,9 @@ const Tex2t = styled.Text``
 export default () => {
   const [messages, setMessages] = useState([])
   const [loading, setLoading] = useState(false)
-  const [rendering, setRendering] = useState(false)
-
+  const [done, setDone] = useState(false)
+  const [reply, setReply] = useState([])
+  const [text, setText] = useState('')
   useEffect(() => {
     setMessages([
       {
@@ -31,6 +32,8 @@ export default () => {
     ])
   }, [])
 
+  
+
   const handleSubmit = async (message) => {
     setLoading(true)
     try {
@@ -40,6 +43,7 @@ export default () => {
         message: message[0].text,
         timestamp: message[0].createdAt,
       })
+
       if (status === 201) {
         alert('메세지를 보냈습니다.')
         console.log(status)
@@ -54,13 +58,13 @@ export default () => {
 
   const getMessage = async () => {
     try {
-      setLoading(true)
       const msg = await api.getMessage()
       console.log(msg.data[0].message)
-      return (reply = [
+      setText(msg.data[0].message())
+      return setReply([
         {
           _id: 1,
-          text: msg.data[0].message,
+          text: text,
           createdAt: new Date(),
           user: {
             _id: 2,
@@ -80,34 +84,24 @@ export default () => {
     setMessages((previousMessages) =>
       GiftedChat.append(previousMessages, messages),
     )
+
+    const message = messages[0].text
+    handleSubmit(messages)
   }, [])
 
-  const sender = (
+  const handleDjangoResponse = () => {}
+    const r = getMessages()
+    this.sendBotResponse(text)
+  }
+  return (
     <GiftedChat
       messages={messages}
       onSend={(messages) => {
         onSend(messages)
-        handleSubmit(messages)
       }}
       user={{
         _id: 1,
       }}
     />
   )
-
-  const reply = (
-    <GiftedChat
-      messages={() => getMessage()}
-      user={{
-        _id: 2,
-      }}
-    />
-  )
-
-  const msg = () => {
-    sender
-    setTimeout(console.log(msg), 3000)
-  }
-
-  return sender
 }

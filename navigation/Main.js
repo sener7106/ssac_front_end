@@ -7,7 +7,8 @@ import Chats from '../screens/Main/Chats'
 import Graph from '../screens/Main/Graph/Graph'
 import colors from '../colors'
 import { Ionicons } from '@expo/vector-icons'
-import Room from '../screens/Main/Room'
+import Room from '../screens/Main/Room/Room'
+import Screen from '../screens/Main/Saved/Screen'
 import StreamChatPresenter from '../screens/StreamChat/StreamChatPresenter'
 import Explain from './Explain'
 import { NavigationContainer } from '@react-navigation/native'
@@ -57,7 +58,7 @@ const Tabs = () => (
       }}
     ></TabsNavigator.Screen>
     <TabsNavigator.Screen
-      name="학습 그래프"
+      name="감정 분석"
       component={Graph}
       options={{
         tabBarIcon: ({ color, size }) => (
@@ -94,8 +95,17 @@ export default () => (
       component={Room}
       options={{
         headerTitle: '대화하기',
-        headerBackTitle: '',
-        headerShown: false,
+        headerBackTitle: '뒤로',
+        headerShown: true,
+      }}
+    ></MainNavigator.Screen>
+    <MainNavigator.Screen
+      name="Screen"
+      component={Screen}
+      options={{
+        headerTitle: '유튜브',
+        headerBackTitle: '뒤로',
+        headerShown: true,
       }}
     ></MainNavigator.Screen>
   </MainNavigator.Navigator>

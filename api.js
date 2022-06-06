@@ -29,4 +29,5 @@ export default {
   // 메세지전송
   sendMessage: (message) => callApi('post', '/chats/message/', message),
   getMessage: () => callApi('get', `/chats/message/2/1`),
+  loadSummary: () => callApi('get', `/summary/summary/`),
 }

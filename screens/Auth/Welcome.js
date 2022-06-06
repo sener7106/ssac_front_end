@@ -2,13 +2,19 @@ import styled from 'styled-components/native'
 import { StatusBar } from 'react-native'
 import { BlurView } from 'expo-blur'
 import Btn from '../../components/Auth/Btn'
+import React, { Text } from 'react-native'
 
 const Container = styled.View`
   justify-content: center;
   align-items: center;
   flex: 1;
 `
-
+const LogoText = styled.Text`
+  padding-top: 30px;
+  font-size: 50px;
+  color: white;
+  font-style: italic;
+`
 const Image = styled.Image`
   position: absolute;
   z-index: -1;
@@ -18,7 +24,7 @@ const Image = styled.Image`
 const Logo = styled.Image`
   width: 350px;
   height: 350px;
-  margin-top: 80px;
+  margin-top: 30px;
 `
 const BtnContainer = styled.View`
   margin-top: 30px;
@@ -39,6 +45,7 @@ export default ({ navigation }) => {
           justifyContent: 'center',
         }}
       >
+        <LogoText>위닝봇!</LogoText>
         <Logo source={require('../../assets/logo.png')} />
         <BtnContainer>
           <Btn onPress={goToSignUp} text={'가입하기'} accent={true} />

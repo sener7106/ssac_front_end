@@ -9,6 +9,7 @@ const Container = styled.View`
   flex: 1;
   justify-content: center;
   align-items: center;
+  background-color: white;
 `
 const Logo = styled.Image`
   width: 150px;
@@ -27,7 +28,7 @@ const Button = styled.View`
 const Text = styled.Text`
   font-weight: 600;
   font-size: 15px;
-  color: ${(props) => (props.accent ? 'white' : colors.black)};
+  color: ${(props) => (props.accent ? white : colors.black)};
 `
 
 export default () => {
@@ -37,9 +38,7 @@ export default () => {
       <Logo source={require('../../../assets/logo.png')} />
       <Text>아직 대화를 시작하지 않았어요. 챗봇에게 인사해보세요!</Text>
       <Text>No chat history. Say Hi to Chatbot!</Text>
-      <TouchableOpacity
-        onPress={() => navigation.navigate('Room')}
-      >
+      <TouchableOpacity onPress={() => navigation.navigate('Room')}>
         <Button>
           <Text style={{ color: 'white' }}>안녕! Hi!</Text>
         </Button>

@@ -22,11 +22,12 @@ const Explain = () => {
     }
   }
   const ImageSource = {
-    0: require('../assets/logo.png'),
-    1: require('../assets/adaptive-icon.png'),
-    2: require('../assets/splash.png'),
-    3: require('../assets/favicon.png'),
-    4: require('../assets/logo.png'),
+    0: require('../assets/main_chat.png'),
+    1: require('../assets/conversation.png'),
+    2: require('../assets/youtube.png'),
+    3: require('../assets/emotion.png'),
+    4: require('../assets/resize.png'),
+    5: require('../assets/logo.png'),
   }
   const { currentPage: pageIndex } = sliderState
   const Page = ({ header, text, text2, image }) => (
@@ -64,25 +65,31 @@ const Explain = () => {
             header={' 『 채팅하기 』 '}
             text={'자유롭게 말을 걸어주세요!'}
             text2={'챗봇이 한국어와 영어로 동시에 대답해줘요!'}
-            image={0}
+            image={1}
           />
           <Page
             header={'『 동영상 학습 』'}
             text={' 영어 학습에 도움이 되는 '}
             text2={'유튜브 영상을 제공합니다!'}
-            image={0}
+            image={2}
           />
           <Page
-            header={'『 학습 그래프 』'}
-            text={'학습 그래프를 통해서 내 감정을 분석해줘요!'}
+            header={'『 감정 분석 』'}
+            text={'문장 요약을 통해서 내 감정을 분석해줘요!'}
             text2={''}
-            image={0}
+            image={3}
+          />
+          <Page
+            header={'『 내 프로필 』'}
+            text={'프로필을 수정할 수 있어요!'}
+            text2={''}
+            image={4}
           />
 
           <TouchableOpacity onPress={() => navigation.navigate('tabs')}>
             <Page
               header={'『 화면을 눌러 시작하기 』'}
-              image={0}
+              image={5}
               text={'자 그럼 대화하러 떠나볼까요~?'}
               onPress={() => navigation.navigate('tabs')}
             />
@@ -106,8 +113,8 @@ const Explain = () => {
 
 const styles = StyleSheet.create({
   imageStyle: {
-    height: '70%',
-    width: '100%',
+    height: '80%',
+    width: '70%',
     marginBottom: 10,
   },
   wrapper: {
