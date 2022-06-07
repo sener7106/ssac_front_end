@@ -27,9 +27,8 @@ export const userLogin = (form) => async (dispatch) => {
     const {
       data: { id, token },
     } = await api.login(form)
-    if (id && token) {
-      dispatch(logIn({ token, id }))
-    }
+
+    dispatch(logIn({ token, id }))
   } catch (e) {
     alert('Wrong user/password')
   }

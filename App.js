@@ -38,7 +38,6 @@ export default function App() {
       require('./assets/resize.png'),
 
       'http://logok.org/wp-content/uploads/2014/07/airbnb-logo-belo-219x286.png',
-      'https://i.ytimg.com/an_webp/2EkTkiHeSmI/mqdefault_6s.webp?du=3000&sqp=COqB95QG&rs=AOn4CLDghYWEYaadVBS6J8pUZKd-0f5dVg',
     ]
     const fonts = [Ionicons.font, SimpleLineIcons.font]
     const imagePromises = cacheImages(images)

@@ -45,7 +45,7 @@ export default ({ navigation }) => {
           justifyContent: 'center',
         }}
       >
-        <LogoText>위닝봇!</LogoText>
+        <LogoText>코잉봇</LogoText>
         <Logo source={require('../../assets/logo.png')} />
         <BtnContainer>
           <Btn onPress={goToSignUp} text={'가입하기'} accent={true} />

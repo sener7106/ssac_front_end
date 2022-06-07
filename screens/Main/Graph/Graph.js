@@ -103,7 +103,7 @@ const Graph = () => {
         <SummaryView>
           <Text>{data}</Text>
           <ResultText>
-            아이가 많이 불안해하고 있어요! {`\n`} 많은 관심을 기울여주세요!
+            아이가 많이 기뻐 하고 있어요! {`\n`} 많이 놀아주세요!
           </ResultText>
         </SummaryView>
       ) : (
