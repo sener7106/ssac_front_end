@@ -20,3 +20,6 @@ Server
 
 # 試演映像
 https://www.youtube.com/watch?v=SPUFWsJGSXo&feature=youtu.be
+
+# 発表資料
+https://drive.google.com/file/d/15-62AKexWPb7YFW2zwKZv7pk0jOBmknC/view?usp=sharing
