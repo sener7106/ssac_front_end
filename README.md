@@ -18,3 +18,5 @@ Back-end
 Server
 - AWS EC2, RDS(MYSQL), S3
 
+# 試演映像
+https://www.youtube.com/watch?v=SPUFWsJGSXo&feature=youtu.be
